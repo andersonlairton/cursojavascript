@@ -6,8 +6,8 @@ console.log(`string com craze\n 5*5=${5*5}\n utilizei tambem o template literals
 /*
 
 /** exercicios com numeros */
-var a=1;
-var b=10;
+let a=1;
+let b=10;//não se usa mais var
 /*
 console.log(a);
 console.log(b);
