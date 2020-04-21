@@ -87,6 +87,7 @@ console.log(soma(2));
 
 //argumento default é quando se pre-define um valor para determinado parametro,para que caso nao seja inserido , ele assuma este valor 
 
+/*
 function potencia(base,exp=2) {
     //caso nao seja inserido valor,o paramentro sera elavado ao quadrado 
     
@@ -103,3 +104,29 @@ function potencia(base,exp=2) {
 }
 
 potencia(prompt("digite o valor da base"),prompt("digite o valor do exponte"));
+*/
+//closure é uma função que retorna outra função
+function lembrarsoma(x) {
+    return function (y) {
+        return x+y;
+    }
+}
+
+let soma1 = lembrarsoma(2);//deve ser sempre atribuida a uma variavel
+console.log(soma1(3));
+
+//nessa função foi feita um contador 
+function contador(i) {
+    let cont =i;
+    let somarContador = function(){
+        console.log(cont);
+        cont++
+    }
+    return somarContador;
+}
+
+let cont = contador(1);
+//imprimindo o valor com um for 
+for (a = 0; a < 10; a++) {
+   cont();
+}
