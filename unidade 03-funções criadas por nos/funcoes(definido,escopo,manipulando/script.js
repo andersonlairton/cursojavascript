@@ -70,4 +70,36 @@ const multiplicarPorDois = x => x*2;
 console.log(multiplicarPorDois(prompt('Digite o numero que sera multiplicado por 2')));
 */
 
-/** argumentos adicionais na função */
+/** argumentos adicionais na função,é um tratamento caso o usuario nao insira determinado parameto  */
+/*
+function soma(a,b) {
+    if (a===undefined|| b===undefined) {
+        console.log("esta função necessita ter dois argumentos");
+       
+    }else{
+        return a+b;
+    }
+    
+}
+console.log(soma(2,1));
+console.log(soma(2));
+*/
+
+//argumento default é quando se pre-define um valor para determinado parametro,para que caso nao seja inserido , ele assuma este valor 
+
+function potencia(base,exp=2) {
+    //caso nao seja inserido valor,o paramentro sera elavado ao quadrado 
+    
+    //!base,neste caso,verifica se a variavel é nula
+    if(base===undefined || !base || (!base && !exp)){
+        alert("favor informar o valor da base");
+    }else if(!exp){
+        alert("o valor sera elevado ao quadrado");
+        exp=2;
+        return alert(`o valor do numero é ${Math.pow(base,exp)}`);
+    }else{
+        return alert(`o valor do numero é ${Math.pow(base,exp)}`);
+    }
+}
+
+potencia(prompt("digite o valor da base"),prompt("digite o valor do exponte"));
