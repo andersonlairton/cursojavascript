@@ -106,6 +106,7 @@ function potencia(base,exp=2) {
 potencia(prompt("digite o valor da base"),prompt("digite o valor do exponte"));
 */
 //closure é uma função que retorna outra função
+/*
 function lembrarsoma(x) {
     return function (y) {
         return x+y;
@@ -130,3 +131,22 @@ let cont = contador(1);
 for (a = 0; a < 10; a++) {
    cont();
 }
+*/
+//função recursion
+//é um metodo das funções,que acontece quando podemos chamar ela diversas vezes,no exemplo do curso,ele chamou dentro da propria função 
+function recursao(n){
+    //esta função se autoinvoca e so para quando o numero é menor que 2
+    if (n-1 <2) {
+        console.log("recursao parou ");
+    }else if(n%2!=0){
+        console.log("numero impar"+n);
+        recursao(n-1);
+    }else{
+        console.log("numero par"+n);
+        recursao(n-2);
+    }
+}
+
+recursao(39)
+recursao(10)
+recursao(100);
